@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="icons/cisma.ico">
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>La esperanza de Chiapas | Cisma Editorial</title>
+    <meta name="description" content="La esperanza de Chiapas, ensayo escrito por Javier Fernández Rincón sobre la experiencia del neozapatismo y el EZLN comparado con la teoría del geógrafo inglés David Harvey, editado por Cisma Editorial">
+    <meta name="keywords" content="Cisma Editorial, Javier Fernández Rincón, zapatismo, neozapatismo, Chiapas, EZLN, David Harvey, política, neoliberalismo, socialismo">
+    <meta name="author" content="Cisma Editorial">
+	<link rel="stylesheet" type="text/css" href="css/trans.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    
+    
+<style>
+		
+@font-face {
+	src: url(fonts/source-sans-pro/SourceSansPro-Regular.otf);
+	font-family:"SS_R";
+}
+@font-face {
+	src:url(fonts/source-sans-pro/SourceSansPro-Light.otf);
+	font-family:"SS_L";
+}
+@font-face {
+	src: url(fonts/league-spartan/leaguespartan-bold.eot);
+	src: url(fonts/league-spartan/leaguespartan-bold.ttf) format('truetype'),
+	url(fonts/league-spartan/leaguespartan-bold.woff) format('woff'),
+	url(fonts/league-spartan/leaguespartan-bold.woff2),
+	url(fonts/league-spartan/LeagueSpartan-Bold.otf);
+	font-family:"spartan";	
+}
+p {
+	font-family: "SS_L";
+	font-size:16px;
+}
+a:link {text-decoration:none; }
+
+/*NAVBAR*/
+	
+.navbar-inverse  {
+	background-color: #EFEFEF;
+}
+.navbar-fixed-top {
+	border:none; 
+	box-shadow: 1px 1px 15px; 
+}
+.navbar-toggle {padding: 6px;}
+.navbar-toggle  .collapse { margin_left: -10px; }
+.navbar-toggle:hover {background-color: transparent !important; }
+.navbar-toggle:focus {
+  	background-color: transparent !important;
+}
+.navbar-nav li {
+	font-family:"SS_R";
+	font-size:17px;
+	transition: 0.2s;
+}
+.navbar-inverse .navbar-nav>li>a:focus {color: black; }
+.navbar-nav li:hover {
+	background-color: #D1D1D1;
+}
+.navbar-right li:hover {background-color:#EFEFEF; }
+.navbar-right li {width: 40px; }
+.cisma_icon {
+	position:relative;
+	top:-5px;
+	width: 150px;
+	height:28px;
+	background-image: url(images/Logo_Cisma.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	display:inline-block;
+	vertical-align:top; 
+	margin-right: -5px;	
+}
+.twitter {
+	height:50px;
+	width:50px;
+	background-image:url(images/twitter.png);
+	background-repeat:no-repeat;
+	background-size:30px 30px;
+	background-position:center;
+	transition:0.2s;
+}
+.facebook {
+	height:50px;
+	width:50px;
+	background-image:url(images/facebook.png);
+	background-repeat:no-repeat;
+	background-size:30px 30px;
+	background-position:center; 
+	transition:0.2s;
+}
+.youtube {
+	height: 50px;
+	width: 50px;
+	background-image:url(images/youtube.png);
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position:center;
+	transition:0.2s;
+}
+.navbar-right .twitter:hover {
+	background-image:url(images/twittercolor.png);
+}
+.navbar-right .facebook:hover {
+	background-image:url(images/facebookcolor.png);	
+}
+.navbar-right .youtube:hover {
+	background-image:url(images/youtubecolor.png)	
+}
+.tcon {
+	appearance: none;
+	display: flex;
+    -webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 20px;
+	transition: 0.3s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 40px;
+	background: 0 0;
+}
+.tcon > * {display: block; }
+.tcon:hover, .tcon:focus {outline: none; }
+.tcon::-moz-focus-inner {border: 0; }
+.tcon-menu__lines {
+  	display: inline-block;
+	height: 3.2px;
+	width: 40px;
+	border-radius: 2.86px;
+	transition: 0.3s;
+	background: #000;
+	position: relative;
+}
+.tcon-menu__lines::before, .tcon-menu__lines::after {
+	display: inline-block;
+	height: 3.2px;
+	width: 40px;
+	border-radius: 2.85714px;
+	transition: 0.3s;
+	background: black;
+	content: '';
+	position: absolute;
+	left: 0;
+	-webkit-transform-origin: 2.85714px center;
+	transform-origin: 2.85714px center;
+	width: 100%; }
+.tcon-menu__lines::before {top: 9px; }
+.tcon-menu__lines::after {top: -9px; }
+.tcon-transform .tcon-menu__lines {
+	-webkit-transform: scale3d(.8, .8, .8);
+	transform: scale3d(.8, .8, .8); 
+}
+
+/*FIN NAVBAR*/
+.contenedor {
+	position:relative; 
+	top: 50px;	
+}
+article {
+	margin-top: 30px;
+}
+article p {
+	margin-top: 20px;
+	font-size:18px;
+	width: 80%; 
+}
+.cover {
+	text-align:center; 
+	margin: 45px 10% 0 10%;
+	}
+.cover img {
+	width: 90%;
+	box-shadow:1px 1px 10px;
+}
+.caracteristicas {
+	margin: 30px 13%;
+	padding:20px;
+	background-color: rgb(239, 239, 239);
+	color:rgba(0,20,55,1.00);
+	}
+.caracteristicas p {font-family:SS_R;}
+article h1 {
+	font-family:spartan; 
+	width: 90%;
+    padding:0;
+	}
+article h2 {
+	font-family:SS_R;
+    font-size: 28px;
+	width: 90%;
+    padding: 0;
+    margin-top: 0;
+	}
+article p {
+    margin-top: 30px;
+}
+.redes {
+	margin-top: 30px;
+	margin: 30px 13% 0 13%;
+}
+.redes a {
+	width: 100%;	
+}
+.redes h3 {
+	font-family: spartan;
+	font-size:20px;
+}
+.share_fb { 
+    display:block;
+	height:50px;
+	margin-bottom:10px;
+	background-image:url(images/FbButton.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-color:#23599B;
+	opacity: 0.8;
+	transition: 0.2s;
+}
+.twitter-share-button {
+	display:block;
+	height:50px;
+	margin-bottom:10px;
+	background-image:url(images/TwButton.png);
+	background-repeat:no-repeat;
+	background-color:#0099ff;
+	background-size:contain;
+	opacity: 0.8;
+	transition: 0.2s;	
+}
+.share_fb:hover {opacity: 1; }
+.twitter-share-button:hover {opacity:1; }
+.articulos {
+	max-width: 700px;
+	margin: 30px 0;
+	background-color: rgb(239, 239, 239);
+	}
+.articulos h2 {
+	font-family:spartan;
+	font-size:24px;
+	margin-bottom: 20px;
+}
+.articulos ul {
+	list-style:none;
+	padding: 0;
+}
+.articulos ul li {margin-bottom:10px; }
+.articulos ul li a {
+	font-family:SS_L;
+	font-size:20px;
+	text-decoration:none;
+	color: #333;
+}
+.articulos ul li a:hover {
+	color: #428bca;
+}
+footer {
+	text-align:center;
+	margin-top: 40px;
+}
+footer p {
+	font-size:18px; 
+	font_family: "SS_L";
+}
+footer .rrss img {
+	width: 35px; 
+	height: 35px; 
+	margin: 0 5px;	
+}
+.rrss {
+	text-align: center;
+	margin:10px 0;
+}
+		
+@media (min-width: 769px) {
+	footer p {margin-top:-10px;}
+	.rrss {display:none; }	
+	article p {max-width: 700px; }
+}
+@media (max-width: 768px) {
+	.navbar-right li {display:none;}
+	footer p {margin-bottom: 0px;}
+	article p {
+		padding: 40px 2% 0 2%; 
+		margin: auto;
+		font-size:18px;
+		}
+	article h1, article h2 {
+        margin:auto;
+        padding: 0 2%;
+        width: 80%;
+		line-height:1.2;
+    }
+    article h1 {margin-top: 30px; margin-bottom: 10px;}
+    article h2 {padding-top: 5px; }
+	.articulos {
+		margin: 30px 13%;
+		width: 75%;
+	}
+	.cover {margin:50px 0; }
+	.cover img {width: 70%; }
+    .caracteristicas {
+        margin:auto;
+	    width: 70%; 
+    }
+	.redes {text-align:center; }
+	.redes a {
+		display:inline-block;
+		min-width: 150px;
+		width:45%;
+	}
+	.share_fb {margin-right: 1%; margin-bottom:0px; }
+	.twitter-share-button {margin-bottom:0px; }
+}
+@media (max-width: 480px) {
+	article p {
+		width:95%; 
+		margin: 0;
+        padding-top: 40px;
+		}
+	article h1 {
+		width: 95%;
+		font-size:30px;
+        padding: 20px 2% 0 2%;
+		margin:0;
+		margin-bottom: 5px;
+	}
+    article h2 {
+		width: 95%;
+		font-size:24px;
+        margin: 0;
+        padding: 5px 2% 0 2%;
+	}
+	.articulos {
+		width:100%;
+		margin:auto;
+		padding: 10px 5% 10px 5%;
+	}
+	.share_fb, .twitter-share-button {margin-bottom:30px; opacity:1;  }
+	.articulos ul li a {font-size:18px; }
+	.redes a {
+		background-size:cover;
+		min-width: 90px; 
+		min-height: 30px;
+		}
+}
+</style>
+<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-68372285-1', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+ 
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+  		<div class="container">
+    		<div class="navbar-header">
+     		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+  				<span type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu"><span class="tcon-menu__lines" aria-hidden="true"></span> <span class="tcon-visuallyhidden">toggle menu</span></span>
+			</button>
+      			<a class="navbar-brand" href="index.html"><div class="cisma_icon"></div></a>
+    		</div>
+    	<div class="collapse navbar-collapse">
+    	  <ul class="nav navbar-nav">
+       		<li><a href="distribucion.html">Distribución</a></li>
+     	  </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="twitter" href="https://twitter.com/cismaeditorial" target="_blank"></a></li>
+            <li><a class="facebook" href="https://es-es.facebook.com/cismaeditorial" target="_blank"></a></li>
+            <li><a class="youtube" href="https://www.youtube.com/channel/UCoNLRhIkjTjLBeianrQiSog" target="_blank"></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+<div class="contenedor">
+    <article class="col-xs-12 col-sm-8 col-sm-push-4">
+    	<h1>La esperanza de Chiapas</h1>
+        <h2>Javier Fernández Rincón</h2>
+        <p>Desde las dos últimas décadas del pasado siglo, el neoliberalismo tiene cada vez más poder en todo el globo, dejando a los proyectos alternativos paulatinamente sin oxígeno hasta hacerlos desaparecer, o simplemente, impidiéndoles nacer. Por ello el teórico social y geógrafo inglés David Harvey propone la creación de espacios de esperanza para hacer frente a este auge.<br/><br/>Por otro lado, el 1 de enero de 1994 el Ejército Zapatista de Liberación Nacional (EZLN) se alzó en armas contra el estado mexicano exigiendo tierra, trabajo, techo, alimentación, salud, educación, libertad, independencia, democracia, justicia y paz. Para dicha organización es más importante la palabra que la propia acción armada, por lo que ésta cobró gran importancia desde el primer momento. Lo que el autor del presente estudio propone es que tomando como premisa la importancia de la palabra en el EZLN se realice un análisis comparativo con la teoría de Harvey.</p>
+    </article>
+    <aside class="col-xs-12 col-sm-4 col-sm-pull-8">
+    	<div class="cover"><img src="images/portadaesperanza_chiapas.jpg" /></div>
+        <div class="caracteristicas">
+            <p>12×18 cm.</p>
+            <p>90 págs.</p>
+            <p>90 gr.</p>
+            <p>Rústica con solapas</p>
+            <p>1ª ed. enero 2012</p>
+            <p>2ª ed. abril 2012</p>
+            <p>PVP: 7 €</p>
+        </div>
+        <div class="redes">
+        <h3>Compártelo en</h3>
+   		<a class="share_fb" href="https://www.facebook.com/sharer/sharer.php?u=http://cismaeditorial.esy.es/chiapas.html" target="_blank" title="Compártelo en Facebook"></a>
+   		<a class="twitter-share-button" href="https://twitter.com/intent/tweet?original_referer=http://cismaeditorial.esy.es/chiapas.html&tw_p=tweetbutton&url=http://cismaeditorial.esy.es/chiapas.html&via=cismaeditorial&text=«La esperanza de Chiapas»" target="_blank" data-size="large" title="Compártelo en Twitter"></a>
+   </div>
+    </aside>
+     <div class="articulos col-xs-12 col-sm-8 col-sm-push-4">
+    	<h2>Artículos relacionados</h2>
+        <ul>
+        	<li><a href="http://www.rebelion.org/noticia.php?id=148378" target="_blank">Reseña de «La esperanza de Chiapas» por Mónica Ortiz (Rebelión)</a></li>
+        </ul>
+    </div>
+</div>
+<footer class="col-xs-12">
+   <div class="rrss">
+      <a href="https://twitter.com/cismaeditorial" target="_blank"><img src="images/twittercolor.png"/></a>
+      <a href="https://es-es.facebook.com/cismaeditorial" target="_blank"><img src="images/facebookcolor.png"/></a>
+      <a href="https://www.youtube.com/channel/UCoNLRhIkjTjLBeianrQiSog" target="_blank"><img src="images/youtubecolor.png"/></a>
+   </div>
+      <p>info@cismaeditorial.es</p>
+      <p>© 2015 Cisma Editorial · <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/es/legalcode.es" target="_blank">Licencia Creative Commons</a></p>
+</footer>
+    
+    <script src="js/jquery.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/trans.js"></script>
+	<script src="js/trens.js"></script>
+	<script>transformicons.add('.tcon');</script>
+ 
+</body>
+</html>

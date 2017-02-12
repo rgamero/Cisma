@@ -1,0 +1,506 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="icons/cisma.ico">
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Cuando el pueblo se organiza | Cisma Editorial</title>
+    <meta name="description" content="Cuando el pueblo se organiza, experiencias de lucha en la construcción de Poder Popular, escrito por Ángeles Maestro, Ángeles Diez, Amparo Lasheras, Begoña Zabala, Carlo Frabetti, Carlos Tena, Constantino Bértolo, Eduardo Hernández y Javier Fernández Rincón, editado por Cisma Editorial">
+    <meta name="keywords" content="Cisma Editorial, Javier Fernández Rincón, poder popular, españa, estado español, lucha obrera, Errekaleor, feminismo, política, neoliberalismo, socialismo">
+    <meta name="author" content="Cisma Editorial">
+	<link rel="stylesheet" type="text/css" href="css/trans.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<style>
+		
+@font-face {
+	src: url(fonts/source-sans-pro/SourceSansPro-Regular.otf);
+	font-family:"SS_R";
+}
+@font-face {
+	src:url(fonts/source-sans-pro/SourceSansPro-Light.otf);
+	font-family:"SS_L";
+}
+@font-face {
+	src: url(fonts/league-spartan/leaguespartan-bold.eot);
+	src: url(fonts/league-spartan/leaguespartan-bold.ttf) format('truetype'),
+	url(fonts/league-spartan/leaguespartan-bold.woff) format('woff'),
+	url(fonts/league-spartan/leaguespartan-bold.woff2),
+	url(fonts/league-spartan/LeagueSpartan-Bold.otf);
+	font-family:"spartan";	
+}
+p {
+	font-family: "SS_L";
+	font-size:16px;
+}
+a:link {text-decoration:none; }
+
+
+/*NAVBAR*/
+	
+.navbar-inverse  {
+	background-color: #EFEFEF;
+}
+.navbar-fixed-top {
+	border:none; 
+	box-shadow: 1px 1px 15px; 
+}
+.navbar-toggle {padding: 6px;}
+.navbar-toggle  .collapse { margin_left: -10px; }
+.navbar-toggle:hover {background-color: transparent !important; }
+.navbar-toggle:focus {
+  	background-color: transparent !important;
+}
+.navbar-nav li {
+	font-family:"SS_R";
+	font-size:17px;
+	transition: 0.2s;
+}
+.navbar-inverse .navbar-nav>li>a:focus {color: black; }
+.navbar-nav li:hover {
+	background-color: #D1D1D1;
+}
+.navbar-right li:hover {background-color:#EFEFEF; }
+.navbar-right li {width: 40px; }
+.cisma_icon {
+	position:relative;
+	top:-5px;
+	width: 150px;
+	height:28px;
+	background-image: url(images/Logo_Cisma.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	display:inline-block;
+	vertical-align:top; 
+	margin-right: -5px;	
+}
+.twitter {
+	height:50px;
+	width:50px;
+	background-image:url(images/twitter.png);
+	background-repeat:no-repeat;
+	background-size:30px 30px;
+	background-position:center;
+	transition:0.2s;
+}
+.facebook {
+	height:50px;
+	width:50px;
+	background-image:url(images/facebook.png);
+	background-repeat:no-repeat;
+	background-size:30px 30px;
+	background-position:center; 
+	transition:0.2s;
+}
+.youtube {
+	height: 50px;
+	width: 50px;
+	background-image:url(images/youtube.png);
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position:center;
+	transition:0.2s;
+}
+.navbar-right .twitter:hover {
+	background-image:url(images/twittercolor.png);
+}
+.navbar-right .facebook:hover {
+	background-image:url(images/facebookcolor.png);	
+}
+.navbar-right .youtube:hover {
+	background-image:url(images/youtubecolor.png)	
+}
+.tcon {
+	appearance: none;
+	display: flex;
+    -webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 20px;
+	transition: 0.3s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 40px;
+	background: 0 0;
+}
+.tcon > * {display: block; }
+.tcon:hover, .tcon:focus {outline: none; }
+.tcon::-moz-focus-inner {border: 0; }
+.tcon-menu__lines {
+  	display: inline-block;
+	height: 3.2px;
+	width: 40px;
+	border-radius: 2.86px;
+	transition: 0.3s;
+	background: #000;
+	position: relative;
+}
+.tcon-menu__lines::before, .tcon-menu__lines::after {
+	display: inline-block;
+	height: 3.2px;
+	width: 40px;
+	border-radius: 2.85714px;
+	transition: 0.3s;
+	background: black;
+	content: '';
+	position: absolute;
+	left: 0;
+	-webkit-transform-origin: 2.85714px center;
+	transform-origin: 2.85714px center;
+	width: 100%; }
+.tcon-menu__lines::before {top: 9px; }
+.tcon-menu__lines::after {top: -9px; }
+.tcon-transform .tcon-menu__lines {
+	-webkit-transform: scale3d(.8, .8, .8);
+	transform: scale3d(.8, .8, .8); 
+}
+
+/*FIN NAVBAR*/
+.contenedor {
+	position:relative; 
+	top: 50px;	
+}
+article {
+	margin-top: 30px;
+}
+article p {
+	margin-top: 20px;
+	font-size:18px;
+	width: 80%; 
+}
+.cover {
+	text-align:center; 
+	margin: 45px 10% 0 10%;
+	}
+.cover img {
+	width: 90%;
+	box-shadow:1px 1px 10px;
+}
+.caracteristicas {
+	margin: 30px 13%;
+	padding:20px;
+	background-color: rgb(239, 239, 239);
+	color:rgba(0,20,55,1.00);
+	}
+.caracteristicas p {font-family:SS_R;}
+article h1 {
+	font-family:spartan; 
+	width: 90%;
+    padding:0;
+	}
+article h2 {
+	font-family:SS_R;
+    font-size: 28px;
+	width: 90%;
+    padding: 0;
+    margin-top: 0;
+	}
+article p {
+    margin-top: 30px;
+}
+.indice {margin: 40px 0 15px; }
+.indice h2 {font-family:spartan; font-size:24px; }
+.indice h3 {font-family:SS_R; font-size:20px; }
+.indice p {margin: 0 0 2px; }
+.indice p span {font-family:SS_R; }
+.redes {
+	margin-top: 30px;
+	margin: 30px 13% 0 13%;
+}
+.redes a {
+	width: 100%;	
+}
+.redes h3 {
+	font-family: spartan;
+	font-size:20px;
+}
+.share_fb { 
+    display:block;
+	height:50px;
+	margin-bottom:10px;
+	background-image:url(images/FbButton.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-color:#23599B;
+	opacity: 0.8;
+	transition: 0.2s;
+}
+.twitter-share-button {
+	display:block;
+	height:50px;
+	margin-bottom:10px;
+	background-image:url(images/TwButton.png);
+	background-repeat:no-repeat;
+	background-color:#0099ff;
+	background-size:contain;
+	opacity: 0.8;
+	transition: 0.2s;	
+}
+.share_fb:hover {opacity: 1; }
+.twitter-share-button:hover {opacity:1; }
+.articulos {
+	max-width: 700px;
+	margin: 30px 0;
+	background-color: rgb(239, 239, 239);
+	}
+.articulos h2 {
+	font-family:spartan;
+	font-size:24px;
+	margin-bottom: 20px;
+}
+.articulos ul {
+	list-style:none;
+	padding: 0;
+}
+.articulos ul li {margin-bottom:10px; }
+.articulos ul li a {
+	font-family:SS_L;
+	font-size:20px;
+	text-decoration:none;
+	color: #333;
+}
+.articulos ul li a:hover {
+	color: #428bca;
+}
+footer {
+	text-align:center;
+	margin-top: 40px;
+}
+footer p {
+	font-size:18px; 
+	font_family: "SS_L";
+}
+footer .rrss img {
+	width: 35px; 
+	height: 35px; 
+	margin: 0 5px;	
+}
+.rrss {
+	text-align: center;
+	margin:10px 0;
+}
+		
+@media (min-width: 769px) {
+	footer p {margin-top:-10px;}
+	.rrss {display:none; }	
+	article p {max-width: 700px; }
+}
+@media (max-width: 768px) {
+	.navbar-right li {display:none;}
+	footer p {margin-bottom: 0px;}
+	article p {
+		padding: 40px 2% 0 2%; 
+		margin: auto;
+		font-size:18px;
+		}
+	article h1, article h2 {
+        margin:auto;
+        padding: 0 2%;
+        width: 80%;
+    }
+    article h1 {margin-top: 30px; margin-bottom: 10px; }
+    article h2 {padding-top: 5px; }
+	.indice p {
+		margin:auto;
+		padding: 0 2%; 
+	}
+	.indice h3 {
+		margin:25px auto 15px; 
+		width: 80%; 
+		padding: 0 2%; 
+	}
+	.cover {margin:50px 0; }
+	.cover img {width: 70%; }
+	.articulos {
+		margin: 30px 13%;
+		width: 75%;
+	}
+    .caracteristicas {
+        margin:auto;
+	    width: 70%; 
+    }
+	.redes {text-align:center; }
+	.redes a {
+		display:inline-block;
+		min-width: 150px;
+		width:45%;
+	}
+	.share_fb {margin-right: 1%; margin-bottom:0px;}
+	.twitter-share-button {margin-bottom:0px; }
+}
+@media (max-width: 480px) {
+	article p {
+		width:95%; 
+		margin: 0;
+        padding-top: 40px;
+		}
+	article h1 {
+		width: 95%;
+		font-size:30px;
+        padding: 20px 2% 0 2%;
+		margin:0;
+		margin-bottom: 5px;
+	}
+    article h2 {
+		width: 95%;
+		font-size:24px;
+        margin: 0;
+        padding: 5px 2% 0 2%;
+	}
+	.indice p {
+		margin: 0 0 5px; 
+		line-height: 1.3; 
+		padding: 0 2%; 
+	}
+	.indice h3 {
+		width: 100%;
+		padding: 0 2%; 
+		font-size:18px; 
+	}	
+	.articulos {
+		width:100%;
+		margin:auto;
+		padding: 10px 5% 10px 5%;
+	}
+	.share_fb, .twitter-share-button {margin-bottom:30px; opacity:1; }
+	.articulos ul li a {font-size:18px; }
+	.redes a {
+		background-size:cover;
+		min-width: 90px; 
+		min-height: 30px;
+		}
+}
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68372285-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+  		<div class="container">
+    		<div class="navbar-header">
+     		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+  				<span type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu"><span class="tcon-menu__lines" aria-hidden="true"></span> <span class="tcon-visuallyhidden">toggle menu</span></span>
+			</button>
+      			<a class="navbar-brand" href="index.html"><div class="cisma_icon"></div></a>
+    		</div>
+    	<div class="collapse navbar-collapse">
+    	  <ul class="nav navbar-nav">
+       		<li><a href="distribucion.html">Distribución</a></li>
+     	  </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="twitter" href="https://twitter.com/cismaeditorial" target="_blank"></a></li>
+            <li><a class="facebook" href="https://es-es.facebook.com/cismaeditorial" target="_blank"></a></li>
+            <li><a class="youtube" href="https://www.youtube.com/channel/UCoNLRhIkjTjLBeianrQiSog" target="_blank"></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+<div class="contenedor">
+    <article class="col-xs-12 col-sm-8 col-sm-push-4">
+    	<h1>Cuando el pueblo se organiza</h1>
+        <h2>VV.AA. / Javier Fernández Rincón (coord.)</h2>
+        <p>A comienzos del 2013 en Madrid y sus alrededores se materializó un proyecto político, Unidad Popular de Clase–UPK, que pretendía la construcción del poder popular a través de diferentes organizaciones y personas independientes. En su breve vida política, apenas año y medio, se desarrolló una experiencia unitaria que nos puede dar enseñanzas y claves para poder entender y afrontar la realidad político-organizativa futura. Las experiencias políticas deben convertirse en herramientas útiles para analizar y trabajar la construcción de poder popular. No pueden quedarse en algo endogámico ni perdido en la memoria, deben estar presentes en las diferentes luchas, ya que es necesaria la autocrítica en las izquierdas a través de las experiencias que indiquen el camino a seguir. A la vez tenemos que comenzar a trazar nuevas líneas de construcción para edificar el deseado poder popular que pueda llevar a la organización de la clase obrera, y por ende, a la toma de poder de nuestra clase.<br/><br/>Esta colección de artículos se hace irremediablemente necesaria en el momento actual en el que nos encontramos, ante una grave crisis en el movimiento popular. El ciclo de movilizaciones ha disminuido considerablemente y las perspectivas políticas de cambio sólo se ven por parte de un sector de las izquierdas en los diferentes escenarios electorales. Ante esta situación de crisis organizativa e ideológica en las izquierdas, tenemos que trabajar discutiendo las distintas experiencias del movimiento obrero y las líneas a seguir que ayuden a organizarnos y a empoderarnos desde nuestra propia clase. Es decir, la creación de poder popular.</p>
+        
+    <div class="indice">
+    	<h2>Índice</h2>
+        <h3 style="margin-bottom: 0px;">Prólogo</h3>
+
+		<h3>Primera parte<br/>
+		Análisis sociopolítico sobre la creación de Poder Popular</h3>
+
+		<p>El tiempo de los intentos <span>// Ángeles Maestro</span></p>
+        <p>Medios de comunicación y poder <span>// Ángeles Diez Rodríguez</span></p>
+        <p>Poder popular, desde el feminismo <span>// Begoña Zabala</span></p>
+        <p>Fuera de la literatura <span>// Constantino Bértolo</span></p>
+        <p>La música y el poder popular <span>// Carlos Tena</span></p>
+        <p>La recontracultura: cultura popular vs cultura de masas <span>// Carlo Frabetti</span></p>
+        
+        <h3>Segunda parte<br/>
+        Experiencias de lucha en la construcción de Poder Popular</h3>
+        
+        <p>Las Brigadas Internacionales: la conciencia antifascista de Europa <span>// Alberto Cruz</span></p>
+        <p>Una construcción de poder popular en Madrid: La Coordinadora de Barrios en Remodelación y el Colectivo de Barrios por la Vivienda <span>// Eduardo Hernández</span></p>
+        <p>Errekaleor Bizirik! Desde la memoria a la utopía <span>// Amparo Lasheras</span></p>
+        <p>Gamonal: El poder popular a través del conflicto <span>// Javier Fernández Rincón</span></p>
+        
+        <h3>Anexo<br/>
+        Documentación de Unidad Popular de Clase — UPK</h3>
+    </div>
+    
+    </article>
+    <aside class="col-xs-12 col-sm-4 col-sm-pull-8">
+    	<div class="cover"><img src="images/PoderPopular.png" /></div>
+        <div class="caracteristicas">
+            <p>12×18 cm.</p>
+            <p>320 págs.</p>
+            <p>290 gr.</p>
+            <p>Rústica con solapas</p>
+            <p>1ª ed. mayo 2015</p>
+            <p>PVP: 10 €</p>
+        </div>
+        <div class="redes">
+        <h3>Compártelo en</h3>
+   		<a class="share_fb" href="https://www.facebook.com/sharer/sharer.php?u=http://cismaeditorial.esy.es/pueblo.html" target="_blank" title="Compártelo en Facebook"></a>
+   		<a class="twitter-share-button" href="https://twitter.com/intent/tweet?original_referer=http://cismaeditorial.esy.es/pueblo.html&tw_p=tweetbutton&url=http://cismaeditorial.esy.es/pueblo.html&via=cismaeditorial&text=«Cuando el pueblo se organiza»" target="_blank" data-size="large" title="Compártelo en Twitter"></a>
+   </div>
+    </aside>
+    <div class="articulos col-xs-12 col-sm-8 col-sm-push-4">
+    	<h2>Artículos relacionados</h2>
+        <ul>
+        	<li><a href="https://www.youtube.com/watch?v=i37lrCeEFAY" target="_blank">[Vídeo/Audio] Presentación de «Cuando el pueblo se organiza» en la librería Traficantes de Sueños</a></li>
+            <iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/217052257&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+            <li><a href="http://audio.urcm.net/La-Luna-Sale-a-Tiempo-Radio-27-11" target="_blank">[Audio] Entrevista a Ángeles Maestro sobre «Cuando el pueblo se organiza» en el programa «La luna sale a tiempo»</a></li>
+            <li><a href="http://anterior.ultimocero.com/articulo/experiencias-lucha-que-sirven-como-aprendizaje" target="_blank">«Experiencias de lucha que sirven como aprendizaje». Entrevista a Javier Fernández en la revista últimoCero</a></li>
+        </ul> 
+    </div>
+</div>
+<div class="clearfix"></div>
+<footer>
+   <div class="rrss">
+      <a href="https://twitter.com/cismaeditorial" target="_blank"><img src="images/twittercolor.png"/></a>
+      <a href="https://es-es.facebook.com/cismaeditorial" target="_blank"><img src="images/facebookcolor.png"/></a>
+      <a href="https://www.youtube.com/channel/UCoNLRhIkjTjLBeianrQiSog" target="_blank"><img src="images/youtubecolor.png"/></a>
+   </div>
+      <p>info@cismaeditorial.es</p>
+      <p>© 2016 Cisma Editorial · <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/es/legalcode.es" target="_blank">Licencia Creative Commons</a></p>
+</footer>
+    
+    <script src="js/jquery.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/trans.js"></script>
+	<script src="js/trens.js"></script>
+	<script>transformicons.add('.tcon');</script>
+</body>
+</html>

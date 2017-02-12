@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="icons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+<link rel="shortcut icon" href="icons/cisma.ico">
+<link rel="manifest" href="icons/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta content="es" name="lang">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<title>Cisma Editorial</title>
+<meta name="description" content="Cisma Editorial, literatura de ensayo, cultura crítica social, política y económica">
+<meta name="keywords" content="Cisma Editorial, editorial, libro, literatura, ensayo, cultura crítica, política, sociología, socialismo, feminismo, marxismo, anarquismo">
+<meta name="author" content="Cisma Editorial">
+<meta content="http://www.cismaeditorial.esy.es/" property="og:url">
+<meta name="twitter:card" content="summary" >
+<meta content="@cismaeditorial" property="twitter:site">
+<link href="http://www.cismaeditorial.esy.es/" rel="canonical">
+<link rel="stylesheet" href="css/camera.css" type="text/css" media="all">
+<link rel="stylesheet" type="text/css" href="css/trans.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
+ 
+    <style>
+	   @font-face {
+			src: url(fonts/source-sans-pro/SourceSansPro-Regular.otf);
+			font-family:"SS_R";
+		}
+		@font-face {
+			src:url(fonts/source-sans-pro/SourceSansPro-Light.otf);
+			font-family:"SS_L";
+		}
+        @font-face {
+			src: url(fonts/league-spartan/leaguespartan-bold.eot);
+			src: url(fonts/league-spartan/leaguespartan-bold.ttf) format('truetype'),
+			url(fonts/league-spartan/leaguespartan-bold.woff) format('woff'),
+			url(fonts/league-spartan/leaguespartan-bold.woff2),
+			url(fonts/league-spartan/LeagueSpartan-Bold.otf);
+			font-family:"spartan";	
+		}
+		
+		html,body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			color: gray;
+		}
+		footer p a {color: #428bca; }
+		footer p a:hover {color:#2a6496; }
+		a:hover {
+			text-decoration: none;
+			color:gray;
+		}
+		a:focus {
+			outline:none;
+			text-decoration: none;
+		}
+		
+		/*Camera Slider Style*/
+		
+		#back_to_camera {
+			background: rgba(255,255,255,.9);
+			clear: both;
+			display: block;
+			height: 40px;
+			line-height: 40px;
+			padding: 20px;
+			position: relative;
+			z-index: 1;
+		}
+		.fluid_container {
+			bottom: 0;
+			left: 0;
+			position: relative;
+			right: 0;
+			top: 0;
+			z-index: 0;
+		}
+		#camera_wrap_1 {
+			bottom: 0;
+			height: 100%;
+			left: 0;
+			margin-bottom: 0!important;
+			right: 0;
+			top: 0;
+		}
+		.camera_bar {
+			z-index: 2;
+		}
+		.camera_thumbs {
+			margin-top: -100px;
+			position: relative;
+			z-index: 1;
+		}
+		.camera_thumbs_cont {
+			border-radius: 0;
+			-moz-border-radius: 0;
+			-webkit-border-radius: 0;
+		}
+		.camera_overlayer {
+			opacity: .1;
+		}
+		.camera_wrap .camera_pag .camera_pag_ul {
+			margin-top: -50px; 	
+		}
+		.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent {
+			background-color: #979797;
+			transition: 1s;
+		}
+		.camera_wrap .camera_pag .camera_pag_ul li.cameracurrent > span{ 
+			background-color: #979797;
+			transition:0.6s;
+		}
+		.camera_prev, .camera_next {
+			background-color:transparent; 
+		}
+        .camera_caption > div {
+            width: 40%;
+            background-color:rgba(172,172,172,0.70); 
+		}
+		.camera_caption > div > a {
+			display: block; 
+			padding: 15px 20px;
+		}
+        .titulo {
+            font-family: spartan;
+            font-size: 26px;
+            color: white;
+			margin: 0;
+		 	margin-bottom: 5px;
+			padding:0;
+        }
+        .subtitulo {
+            font-family: SS_L;
+            color: white;
+			text-align:left;
+            font-size: 18px;
+            line-height: 1.1;
+			margin: 0;
+			padding:0;
+        }
+		/*FIN Camera Slider Style*/
+        
+        
+        .tcon {
+		  appearance: none;
+		  display: flex;
+		  -webkit-justify-content: center;
+		  -ms-flex-pack: center;
+		  justify-content: center;
+		  -webkit-align-items: center;
+		  -ms-flex-align: center;
+		  align-items: center;
+		  height: 20px;
+		  transition: 0.3s;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		  width: 40px;
+		  background: 0 0;
+		}
+		 .tcon > * {
+			display: block; }
+		  .tcon:hover, .tcon:focus {
+			outline: none; }
+		  .tcon::-moz-focus-inner {
+			border: 0; }
+		  .tcon-menu__lines {
+  			  display: inline-block;
+			  height: 3.2px;
+			  width: 40px;
+			  border-radius: 2.86px;
+			  transition: 0.3s;
+			  background: #000;
+			  position: relative;
+			}
+		  .tcon-menu__lines::before, .tcon-menu__lines::after {
+			display: inline-block;
+			height: 3.2px;
+			width: 40px;
+			border-radius: 2.85714px;
+			transition: 0.3s;
+			background: black;
+			content: '';
+			position: absolute;
+			left: 0;
+			-webkit-transform-origin: 2.85714px center;
+			transform-origin: 2.85714px center;
+			width: 100%; }
+		  .tcon-menu__lines::before {
+			top: 9px; }
+		  .tcon-menu__lines::after {
+			top: -9px; 
+			
+			}
+		.tcon-transform .tcon-menu__lines {
+			-webkit-transform: scale3d(.8, .8, .8);
+			transform: scale3d(.8, .8, .8); 
+			}
+		.navbar-toggle {padding: 6px;}
+		.navbar-toggle  .collapse { margin_left: -10px; }
+		.navbar-toggle:hover {background-color: transparent !important; }
+		.navbar-toggle:focus {
+  			background-color: transparent !important;
+		}
+		.navbar-fixed-top {
+			border:none; 
+			box-shadow: 1px 1px 15px; 
+		}
+        .navbar-inverse  {
+			background-color: #EFEFEF;
+		}
+		p {
+			font-family: "SS_L";
+			font-size:16px;
+		}
+		.navbar-nav li {
+			font-family:"SS_R";
+			font-size:17px;
+			transition: 0.2s;
+		}
+		.navbar-inverse .navbar-nav>li>a:focus {color: black; }
+		.navbar-nav li:hover {
+			background-color: #D1D1D1;
+		}
+		.navbar-right li:hover {background-color:#EFEFEF; }
+		.navbar-right li {width: 40px; }
+		.cisma_icon {
+			position:relative;
+			top:-5px;
+			width: 150px;
+			height:28px;
+			background-image: url(images/Logo_Cisma.png);
+			background-repeat:no-repeat;
+			background-size:contain;
+			display:inline-block;
+			vertical-align:top; 
+			margin-right: -5px;	
+		}
+		.twitter {
+			height:50px;
+			width:50px;
+			background-image:url(images/twitter.png);
+			background-repeat:no-repeat;
+			background-size:30px 30px;
+			background-position:center;
+			transition:0.2s;
+		}
+		.facebook {
+			height:50px;
+			width:50px;
+			background-image:url(images/facebook.png);
+			background-repeat:no-repeat;
+			background-size:30px 30px;
+			background-position:center; 
+			transition:0.2s;
+		}
+		.youtube {
+			height: 50px;
+			width: 50px;
+			background-image:url(images/youtube.png);
+			background-repeat: no-repeat;
+			background-size: 30px 30px;
+			background-position:center;
+			transition:0.2s;
+		}
+		.navbar-right .twitter:hover {
+			background-image:url(images/twittercolor.png);
+		}
+		.navbar-right .facebook:hover {
+			background-image:url(images/facebookcolor.png);	
+		}
+		.navbar-right .youtube:hover {
+			background-image:url(images/youtubecolor.png)	
+		}
+		h2 {text-align:center; }
+		.libros {
+			position:relative;
+			top: 150px;
+			text-align:center;
+			padding: 0;
+			margin: 0;
+			}
+		.libros article img {
+			width: 60% !important;
+			box-shadow: 1px 1px 15px; 
+		}
+		.libros article div {
+			display:inline-block;
+			padding:0;
+			margin-bottom: 100px;
+		}
+		.cover {
+			color:#676767;
+			text-align: left;
+			width: 60%;
+			height: 100%;
+			background-color: #EFEFEF;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			margin-left: 20%;
+			transition:0.2s;
+		}
+        .cover_rec {
+			color:#191919;
+			text-align: left;
+			width: 60%;
+			height: 100%;
+			background-image: url(images/blasco_fondo.jpg);
+            background-size: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			margin-left: 20%;
+			transition:0.2s;
+		}
+        .cover_min {
+			color:#69606b;
+			text-align: left;
+			width: 60%;
+			height: 100%;
+			background-color: #EFEFEF;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			margin-left: 20%;
+			transition:0.2s;
+		}
+		.rec {
+			color:#191919;
+			background-image: url(images/blasco_fondo.jpg);
+            background-size: 100%;
+		}
+		.cover p, .cover_rec p, .cover_min p {line-height:1.3;}
+        .cover p, .cover_rec p {
+            padding: 0 50px;
+            font-size: 20px;
+        }
+		.cover h2, .cover_rec h2 {
+			padding:40px;
+			font-size:40px;
+		}
+		.cover:hover{
+			opacity: 1;
+			}
+        .cover_min:hover{
+			opacity: 1;
+			}
+        .cover_rec:hover{
+			opacity: 1;
+			}
+		.cover h2, .cover_rec h2, .cover_min h2 {
+			font-family: SS_R; 
+			}
+		footer {
+			text-align:center;
+			margin-top:100px;
+		}
+		.slogan {
+			font-family:"SS_L";
+			margin-bottom: 40px;
+		}
+		footer p {
+			font-size:18px; 
+			font_family: "SS_L";
+		
+		}
+		footer .rrss img {
+			width: 35px; 
+			height: 35px; 
+			margin: 0 5px	
+		}
+		.rrss {
+			text-align: center;
+			margin:5px 0;
+		}
+		
+		/*COOKIES*/
+		
+		#cookies {
+			display: none;
+			position: fixed;
+			margin:auto;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			padding: 10px 40px;
+			width: 80%;
+			font-family: SS_L;
+			font-size: 16px;
+			text-align: center;
+			min-height: 40px;
+			background-color: rgba(40,40,40,0.5);
+			color: #fff;
+			z-index: 99999;
+		}
+		#cookies a {
+			color:#fff;
+		}
+		#cookies p {margin:0 0 10px 0;}
+		#cerrar-aviso {
+			display: inline-block;
+			padding: 10px 40px;
+			font-family: spartan;
+			font-size: 14px;
+			background-color: #D70A17;
+			transition: 0.2s;
+		}
+		#cerrar-aviso:hover {color: #282828; }
+
+		/*FIN COOKIES*/
+		
+		
+		/*Media queries covers*/
+		
+		@media (min-width: 481px) and (max-width: 520px) {
+			.cover p, .cover_rec p, .cover_min p {
+				padding:10px 30px;
+				font-size:15px;
+			}
+			.cover h2, .cover_rec h2, .cover_min h2 {
+				padding:10px 40px;
+				font-size:22px;
+			}
+		}
+		@media (min-width: 521px) and (max-width: 590px) {
+			.cover p, .cover_rec p, .cover_min p {
+				padding:0px 30px;
+				font-size:18px;
+			}
+			.cover h2, .cover_rec h2, .cover_min h2 {
+				padding:10px 50px;
+				font-size:26px;
+			}
+		}
+		@media (min-width: 591px) and (max-width: 660px) {
+			.cover p, .cover_rec p, .cover_min p {
+				padding:20px 40px 0px 40px;
+				font-size:18px;
+			}
+			.cover h2, .cover_rec h2, .cover_min h2 {
+				padding:15px 60px 0px 60px;
+				font-size:30px;
+			}
+		}
+		@media (min-width: 661px) and (max-width: 768px) {
+			.cover p, .cover_rec p, .cover_min p {
+				padding:0px 60px;
+				font-size:20px;
+			}
+			.cover h2, .cover_rec h2, .cover_min h2 {
+				padding:40px 60px 20px 60px;
+				font-size:30px;
+			}
+		}
+		@media (min-width: 769px) and (max-width: 850px) {
+			.cover p, .cover_rec p, .cover_min p {
+				padding:0px 70px;
+				font-size:22px;
+			}
+			.cover h2, .cover_rec h2, .cover_min h2 {
+				padding:40px 80px;
+				font-size:36px;
+			}
+		}
+        @media (min-width: 851px) and (max-width: 991px) {
+            .cover p, .cover_rec p, .cover_min p {
+				padding: 0px 80px;
+				font-size:24px;
+            }
+			.cover h2, .cover_rec h2, .cover_min h2 {
+				padding:50px 90px;
+				font-size:40px;
+			}
+        }
+		@media (min-width: 992px) and (max-width: 1100px){
+			.cover p, .cover_rec p {
+				padding:0px 30px;
+				font-size:16px;
+			}
+            .cover_min p {
+                padding:0 15px;
+				font-size:12px;
+            }
+			.cover h2, .cover_rec h2 {
+				padding:20px 50px 10px 50px;
+				font-size:24px;
+			}
+			.cover_min h2 {
+				padding:0 15px;
+				font-size:18px;
+			}
+		}
+		@media (min-width: 1101px) and (max-width: 1199px) {
+			.cover p, .cover_rec p {
+				padding:0px 40px;
+				font-size:17px;
+			}
+            .cover_min p {
+                padding:5px 20px;
+				font-size:13px;
+            }
+			.cover h2, .cover_rec h2 {
+				padding:20px 60px 20px 60px;
+				font-size:26px;
+			}
+			.cover_min h2 {
+				padding:0px 20px;
+				font-size:20px;
+			}
+		}
+		@media (min-width: 1200px) and (max-width: 1249px){
+			.cover p, .cover_rec p {
+				padding:10px 40px;
+				font-size:18px;
+			}
+            .cover_min p {
+                padding:5px 25px;
+				font-size:14px;
+            }
+			.cover h2, .cover_rec h2 {
+				padding:20px 60px 20px 60px;
+				font-size:28px;
+			}
+			.cover_min h2 {
+				padding:0px 20px;
+				font-size:20px;
+			}
+			
+		}
+		@media (min-width: 1250px) and (max-width: 1289px){
+			.cover p, .cover_rec p {
+				padding:0 40px;
+				font-size:18px;
+			}
+			.cover_min p {
+				padding:5px 25px;
+				font-size:14px;
+			}
+			.cover h2, .cover_rec h2 {
+				padding:25px 70px;
+				font-size:26px;
+			}
+			.cover_min h2 {
+				padding:0px 25px;
+				font-size:20px;
+			}
+		}
+		@media (min-width: 1290px) and (max-width: 1349px) {
+			.cover p, .cover_rec p {
+				padding:0 40px;
+				font-size:20px;
+			}
+			.cover_min p {
+				padding:10px 25px;
+				font-size:15px;
+			}
+			.cover h2, .cover_rec h2 {
+				padding:30px 70px 25px 70px;
+				font-size:28px;
+			}
+			.cover_min h2 {
+				padding:0px 30px;
+			 	font-size:20px;
+			}
+		}
+		@media (min-width: 1350px) and (max-width: 1449px) {
+			.cover_min p {
+				padding:10px 30px;
+				font-size:15px;
+			}
+			.cover h2, .cover_rec h2 {
+				padding:30px 80px 20px 80px;
+				font-size:30px;
+			}
+			.cover_min h2 {
+				padding:5px 30px 0 30px;
+				font-size:22px;
+			}
+			
+		}
+		@media (min-width: 1450px) and (max-width: 1589px) {
+			.cover_min p {
+				padding:15px 30px;
+				font-size:17px;
+			}
+			.cover h2, .cover_rec h2 {
+				padding:30px 80px 25px 80px;
+				font-size:36px;
+			}
+			.cover_min h2 {
+				padding:10px 15px 0px 15px;
+				font-size:22px;
+			}
+		}
+		@media (min-width: 1590px) and (max-width: 1719px){
+			.cover p, .cover_rec p {
+				padding:0 80px;
+				font-size:22px;
+			}
+			.cover h2, .cover_rec h2 {
+				padding:50px 100px 40px 100px;
+				font-size:36px;
+			}
+			.cover_min p {
+				padding:15px 40px;
+				font-size:18px;
+			}
+			.cover_min h2 {
+				padding:20px 20px 0px 20px;
+				font-size:24px;
+			}
+			.camera_caption > div {width: 30%;}
+		}
+		@media (min-width: 1720px) and (max-width: 1819px) {
+			.cover p, .cover_rec p {
+				padding:0 80px;
+				font-size:24px;
+			}
+			.cover h2, .cover_rec h2 {
+				padding:50px 100px 40px 100px;
+				font-size:36px;
+			}
+			.cover_min p {
+				padding:15px 40px;
+				font-size:20px;
+			}
+			.cover_min h2 {
+				padding:20px 20px 0px 20px;
+				font-size:26px;
+			}
+		}
+		@media (min-width: 1820px) {
+			.cover p, .cover_rec p {
+				padding:0 80px;
+				font-size:26px;
+			}
+			.cover h2, .cover_rec h2 {
+				padding:50px 120px 40px 120px;
+				font-size:38px;
+			}
+			.cover_min p {
+				padding:15px 45px;
+				font-size:21px;
+			}
+			.cover_min h2 {
+				padding:25px 20px 0px 20px;
+				font-size:26px;
+			}
+			
+		}
+		
+		/*FIN Media queries covers*/
+		
+		@media (max-width: 592px) {
+			.slogan {font-size:20px;}
+            .camera_caption > div {width: 60%;}
+		}
+		@media (min-width: 592px) and (max-width: 768px) {
+			.slogan {font-size:24px;}
+            .camera_caption > div {width: 60%;}
+		}
+		@media (min-width: 769px) and (max-width: 991px) {
+			.libros article img {width: 70%;}
+			.slogan {font-size:26px;}
+            .camera_caption > div {width: 50%;}
+		}
+		@media (min-width: 769px) {
+			footer p {margin-top:-10px;}
+		}
+		@media (min-width: 992px) {	
+			footer {margin-top:140px;}
+			.slogan {font-size:28px;}
+		}
+		@media (max-width: 768px) {
+			.navbar-right li {display:none;}
+			footer p {margin-bottom: 0px;}
+			#cookies {
+				width:100%;
+				padding: 10px 5px;
+			}
+			#cookies #cerrar-aviso a{
+				color:#fff;
+			}
+		}
+		@media (min-width: 768px) {
+			.rrss {display:none; }	
+		}
+		@media (max-width: 480px) {
+			.cover, .cover_rec, .cover_min {visibility:hidden; }
+			div.camera_pag {display:none; }	
+			.camera_caption > div {width: 100%; }
+			.titulo {font-size: 22px; }
+			.subtitulo {font-size:16px; }
+			.slogan {padding: 0 20px; }
+			#cookies {
+				min-height: 30px;
+				color: black;
+				background-color: #EFEFEF;
+			}
+			#cookies p {font-size:14px; }
+		}
+
+		
+	</style>
+<script src="js/jquery.min.js" ></script>
+<script src="js/camera.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+
+
+<!--CAMERA SLIDER SCRIPT-->
+<script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_1').camera({
+				height: '500px',
+				pagination: true,
+				thumbnails: false,
+				hover: true,
+				opacityOnGrid: false,
+				playPause: false,
+				navigationHover: true,
+				overlayer: true,
+				fx: 'simpleFade,scrollLeft',
+				mobileFx: 'simpleFade',
+				time: 3000,
+				imagePath: "images/"
+			});
+
+		});
+<!--FIN CAMERA SLIDER SCRIPT*/-->	
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68372285-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+   
+
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+  		<span type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu"><span class="tcon-menu__lines" aria-hidden="true"></span> <span class="tcon-visuallyhidden">toggle menu</span></span>
+	</button>
+      <a class="navbar-brand" href="index.html"><div class="cisma_icon"></div></a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="distribucion.html">Distribución</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="twitter" href="https://twitter.com/cismaeditorial" target="_blank"></a></li>
+        <li><a class="facebook" href="https://es-es.facebook.com/cismaeditorial" target="_blank"></a></li>
+      	<li><a class="youtube" href="https://www.youtube.com/channel/UCoNLRhIkjTjLBeianrQiSog" target="_blank"></a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+  
+	<div class="fluid_container">
+        <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_1">
+        	<div data-src="images/Intermediae.jpg">
+            	<div class="camera_caption fadeFromBottom" style="visibility: visible; bottom: 0px;">
+                	<a href="https://www.youtube.com/watch?v=-bRh0Kaxi14" target="_blank">
+                        <h1 class="titulo">Vídeo de la presentación de «La ciudad negocio» en Matadero Madrid</h1>
+                        <h2 class="subtitulo">Con las intervenciones de Yayo Herrero y Jorge García Castaño</h2>
+                    </a>
+                </div>
+            </div>
+            <div data-src="images/Presentacion.jpg">
+                <div class="camera_caption fadeFromBottom" style="visibility: visible; bottom: 0px;">
+                    <a href="http://www.ultimocero.com/articulo/experiencias-lucha-que-sirven-como-aprendizaje" target="_blank">
+                        <h1 class="titulo">«Experiencias de lucha que sirven como aprendizaje»</h1>
+                        <h2 class="subtitulo">Entrevista en la revista últimoCero</h2>
+                    </a>  
+                </div>
+            </div>
+            
+</div><!-- #camera_wrap_1 -->
+
+    </div><!-- .fluid_container -->
+   
+    <div class="libros">
+    	<article>
+        	<div class="col-xs-12 col-md-4 col-lg-4">
+            	<a href="ciudadnegocio.html">
+            	<img src="images/Laciudadnegocio.jpg" alt="La ciudad negocio. Turismo y movilización social en pugna"/>
+            	<div class="cover_min">
+                	<h2>La ciudad negocio</h2>
+                    <p>El turismo, o la economía del ocio en general, supone uno de los dispositivos de poder-saber neoliberal más poderosos de la contemporaneidad, transformando territorios y sociedades profundamente. Los grandes datos muestran su capacidad como generador de PIB, de empleo y como arrastre de otros sectores económicos, lo que lo convierte en una pieza clave de las políticas públicas y de la economía globalizada.</p>
+                </div>
+               	</a>
+            </div>
+        	<div class="col-xs-12 col-md-4 col-lg-4">
+            	<a href="pueblo.html">
+            	<img src="images/PoderPopular.png" alt="Cuando el pueblo se organiza. Experiencias de lucha en la construcción de poder popular"/>
+            	<div class="cover_min">
+                	<h2>Cuando el pueblo se organiza</h2>
+                    <p>A partir de 2008, en respuesta a las políticas «austericidas» de los distintos gobiernos, surgió un ciclo de movilizaciones que desde 2014, debido a la apuesta por el cambio a través de vías electorales, ha disminuido considerablemente. Este libro recoge análisis y experiencias de lucha como Gamonal y la lucha por la vivienda en los 70 que nos enseñan la importancia de construir poder popular, que sigue siendo la principal arma de la clase obrera para responder a los abusos del poder político.</p>
+                </div>
+               	</a>
+            </div>
+            <div class="col-xs-12 col-md-4 col-lg-4">
+                <a href="blasco.html">
+                <img src="images/Blasco.jpg" alt="Por España y contra el rey" />
+                <div class="cover_min rec">
+                	<h2>Por España y contra el rey</h2>
+                    <p>El célebre escritor Vicente Blasco Ibáñez escribió una serie de artículos entre 1924 y 1925 arremetiendo contra la degradación moral de la dictadura de Primo de Rivera y la monarquía alfonsina, mientras se encontraba exiliado en París. La única edición publicada de este volumen se realizó allí, a cargo de la editorial Excelsior. Recuperamos estos textos por su impagable valor histórico, literario y por suponer una exaltación del proyecto republicano que sigue vigente hoy en día.</p>
+                </div>
+               	</a>
+            </div>
+            <div class="col-xs-12 col-md-4 col-lg-4">
+                <a href="chiapas.html">
+                <img src="images/portadaesperanza_chiapas.jpg" alt="La esperanza de Chiapas" />
+                <div class="cover_min">
+                	<h2>La esperanza de Chiapas</h2>
+                    <p>A principios de los 90 el zapatismo supuso la gran referencia de la lucha antiimperialista tras la caída del muro de Berlín. En este libro se aborda la trayectoria y el discurso del EZLN, realizando un análisis comparativo con la obra del geógrafo inglés David Harvey «Espacios de esperanza» para dilucidar si el discurso zapatista puede servir realmente para construir un espacio político al margen del neoliberalismo.</p>
+                </div>
+               	</a>
+            </div>
+            <div class="col-xs-12 col-md-4 col-lg-4">
+            <a href="doma.html">
+            <img src="images/portada_doma.png" alt="La doma del hombre" />
+            	<div class="cover_min">
+            	<h2>La doma del hombre</h2>
+                <p>En los últimos 30 años la ofensiva medíática e ideológica a favor del individualismo ha precipitado la desaparición de la vida comunitaria, lo que ha instalado una sensación de impotencia frente al poder y el abandono de la esfera pública. Desde una perspectiva política y a través de ejemplos propios de la cultura occidental, en esta obra se analizan diversos factores que nos han conducido a la dejación de nuestros deberes cívicos y al desapego por la participación política.</p>
+           		</div>
+            	</a>
+            </div>
+            <div class="col-xs-12 col-md-4 col-lg-4">
+            <a href="sanidad.html">
+            <img src="images/sin-tc3adtulo.jpg" alt="Crisis capitalista y privatización de la sanidad" />
+            <div class="cover_min">
+            	<h2>Crisis capitalista y privatización de la sanidad</h2>
+                <p>En esta recopilación de artículos escritos entre 2008 y 2012 Ángeles Maestro aborda los aspectos políticos y las consecuencias para la salud pública de las políticas privatizadoras en el sector de la sanidad, que lejos de ser un proceso reciente derivado de las «necesidades de austeridad» forman parte de un programa político compartido por las principales fuerzas políticas e instituciones desde la Transición hasta la actualidad.</p>
+           		</div>
+            </a>
+            </div>
+    	</article>
+    </div>
+    <div class="clearfix"></div>
+	<footer>
+    	<p class="slogan">Escisión, discordia, desavenencia. Este es nuestro espíritu.</p>
+    	<div class="rrss">
+        	<a href="https://twitter.com/cismaeditorial" target="_blank"><img src="images/twittercolor.png"/></a>
+            <a href="https://es-es.facebook.com/cismaeditorial" target="_blank"><img src="images/facebookcolor.png"/></a>
+            <a href="https://www.youtube.com/channel/UCoNLRhIkjTjLBeianrQiSog" target="_blank"><img src="images/youtubecolor.png"/></a>
+        </div>
+        <p>info@cismaeditorial.es</p>
+        <p>© 2016 Cisma Editorial · <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/es/legalcode.es" target="_blank">Licencia Creative Commons</a></p>
+    </footer>
+    <div id="cookies">
+        <p>Utilizamos cookies propias y de terceros para su funcionamiento, para mantener la sesión y personalizar la experiencia del usuario, así como para obtener estadísticas anónimas de uso de la web. Mas información <a href="politica_cookies.html" style="text-decoration:underline; color:black;" target="_blank">aquí</a></p>
+        <a href="javascript:void(0);" onclick="PonerCookie();" id="cerrar-aviso">Aceptar</a>
+    </div>
+
+<script>
+function getCookie(c_name){
+    var c_value = document.cookie;
+    var c_start = c_value.indexOf(" " + c_name + "=");
+    if (c_start == -1){
+        c_start = c_value.indexOf(c_name + "=");
+    }
+    if (c_start == -1){
+        c_value = null;
+    }else{
+        c_start = c_value.indexOf("=", c_start) + 1;
+        var c_end = c_value.indexOf(";", c_start);
+        if (c_end == -1){
+            c_end = c_value.length;
+        }
+        c_value = unescape(c_value.substring(c_start,c_end));
+    }
+    return c_value;
+}
+ 
+function setCookie(c_name,value,exdays){
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+ 
+if(getCookie('cismacookie')!="1"){
+    document.getElementById("cookies").style.display="block";
+}
+
+function PonerCookie(){
+    setCookie('cismacookie','1',365);
+    document.getElementById("cookies").style.display="none";
+}
+
+</script>
+
+
+    
+
+</body>
+</html>

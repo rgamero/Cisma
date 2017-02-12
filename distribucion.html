@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="icons/cisma.ico">
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Distribución | Cisma Editorial</title>
+    <meta name="description" content="Distribución, puntos de venta libros de Cisma Editorial y envíos por Correos">
+    <meta name="keywords" content="Cisma Editorial, envíos por correo, distribución libros, puntos de venta libros de Cisma Editorial">
+    <meta name="author" content="Rubén Gamero">
+	<link rel="stylesheet" type="text/css" href="css/trans.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-68372285-1', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+
+<style>
+		
+@font-face {
+	src: url(fonts/source-sans-pro/SourceSansPro-Semibold.otf);
+	font-family:"SS_B";
+}
+@font-face {
+	src: url(fonts/source-sans-pro/SourceSansPro-Regular.otf);
+	font-family:"SS_R";
+}
+@font-face {
+	src:url(fonts/source-sans-pro/SourceSansPro-Light.otf);
+	font-family:"SS_L";
+}
+@font-face {
+	src: url(fonts/league-spartan/leaguespartan-bold.eot);
+	src: url(fonts/league-spartan/leaguespartan-bold.ttf) format('truetype'),
+	url(fonts/league-spartan/leaguespartan-bold.woff) format('woff'),
+	url(fonts/league-spartan/leaguespartan-bold.woff2),
+	url(fonts/league-spartan/LeagueSpartan-Bold.otf);
+	font-family:"spartan";	
+}
+p {
+	font-family: "SS_L";
+	font-size:16px;
+}
+a {
+	color:#333;
+	font-family: SS_L;
+	font-size:16px;
+}
+a:link {text-decoration:none; }
+a:hover {color: black; }
+a:focus {
+	outline:none;
+	text-decoration: none;
+	color: inherit;
+}
+footer p a {color: #428bca; }
+footer p a:hover {color:#2a6496; }
+
+/*NAVBAR*/
+	
+.navbar-inverse  {
+	background-color: #EFEFEF;
+}
+.navbar-fixed-top {
+	border:none; 
+	box-shadow: 1px 1px 15px; 
+}
+.navbar-toggle {padding: 6px;}
+.navbar-toggle  .collapse { margin_left: -10px; }
+.navbar-toggle:hover {background-color: transparent !important; }
+.navbar-toggle:focus {
+  	background-color: transparent !important;
+}
+.navbar-nav li a {
+	font-family:"SS_R";
+	font-size:17px;
+	transition: 0.2s;
+}
+.navbar-inverse .navbar-nav>li>a:focus {color: black; }
+.navbar-nav li:hover {
+	background-color: #D1D1D1;
+}
+.navbar-right li:hover {background-color:#EFEFEF; }
+.navbar-right li {width: 40px; }
+.cisma_icon {
+	position:relative;
+	top:-5px;
+	width: 150px;
+	height:28px;
+	background-image: url(images/Logo_Cisma.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+	display:inline-block;
+	vertical-align:top; 
+	margin-right: -5px;	
+}
+.twitter {
+	height:50px;
+	width:50px;
+	background-image:url(images/twitter.png);
+	background-repeat:no-repeat;
+	background-size:30px 30px;
+	background-position:center;
+	transition:0.2s;
+}
+.facebook {
+	height:50px;
+	width:50px;
+	background-image:url(images/facebook.png);
+	background-repeat:no-repeat;
+	background-size:30px 30px;
+	background-position:center; 
+	transition:0.2s;
+}
+.youtube {
+	height: 50px;
+	width: 50px;
+	background-image:url(images/youtube.png);
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position:center;
+	transition:0.2s;
+}
+.navbar-right .twitter:hover {
+	background-image:url(images/twittercolor.png);
+}
+.navbar-right .facebook:hover {
+	background-image:url(images/facebookcolor.png);	
+}
+.navbar-right .youtube:hover {
+	background-image:url(images/youtubecolor.png)	
+}
+.tcon {
+	appearance: none;
+	display: flex;
+    -webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 20px;
+	transition: 0.3s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 40px;
+	background: 0 0;
+}
+.tcon > * {display: block; }
+.tcon:hover, .tcon:focus {outline: none; }
+.tcon::-moz-focus-inner {border: 0; }
+.tcon-menu__lines {
+  	display: inline-block;
+	height: 3.2px;
+	width: 40px;
+	border-radius: 2.86px;
+	transition: 0.3s;
+	background: #000;
+	position: relative;
+}
+.tcon-menu__lines::before, .tcon-menu__lines::after {
+	display: inline-block;
+	height: 3.2px;
+	width: 40px;
+	border-radius: 2.85714px;
+	transition: 0.3s;
+	background: black;
+	content: '';
+	position: absolute;
+	left: 0;
+	-webkit-transform-origin: 2.85714px center;
+	transform-origin: 2.85714px center;
+	width: 100%; }
+.tcon-menu__lines::before {top: 9px; }
+.tcon-menu__lines::after {top: -9px; }
+.tcon-transform .tcon-menu__lines {
+	-webkit-transform: scale3d(.8, .8, .8);
+	transform: scale3d(.8, .8, .8); 
+}
+
+/*FIN NAVBAR*/
+
+.contenedor {margin-top:80px; }
+h1 {font-family:spartan; margin-bottom: 40px;}
+section {margin-top: 40px; }
+section p, section p a{font-size:20px; }
+.puntos div {
+	min-height: 275px;
+	overflow: hidden;
+	text-align: center;
+	background-color: #EFEFEF;
+	padding:0;
+	margin: 0;
+	transition:0.2s;
+}
+.puntos div:hover {
+	background-color: #DDDDDD;
+}
+.puntos > div > a {
+	display: block;
+	padding: 23px 20px;
+}
+.puntos a h3 {font-family: SS_B; font-size:22px; }
+.puntos div p {margin: 0; }
+.puntos div:first-child img {width:90%; }
+.espacio {margin-top: 10px; width: 90%; }
+.covers div img {
+	box-shadow:1px 1px 10px;
+	width:100%;
+	margin-bottom:30px;
+	}
+footer {
+	text-align:center;
+	margin-top: 40px;
+}
+footer p, footer p a {
+	font-size:18px; 
+	font_family: "SS_L";
+	text-decoration:none;
+}
+footer .rrss img {
+	width: 35px; 
+	height: 35px; 
+	margin: 0 5px;	
+}
+.rrss {
+	text-align: center;
+	margin:10px 0;
+}
+@media (min-width: 1196px) {
+	.covers div img {width: 90%; }
+}
+@media (min-width: 769px) {
+	footer p {margin-top:-10px;}
+	.rrss {display:none; }	
+}
+@media (max-width: 768px) {
+	.navbar-right li {display:none;}
+	article.container {padding:0 30px; }
+	.puntos div {min-height: 300px; }
+	.espacio {margin-top: 30px; }
+	.covers div {text-align:center; }
+	.covers div img {width: 60%; }
+	.container {padding: 0 30px; }
+	footer p {margin-bottom: 0px;}
+	.redes {text-align:center; }
+	.redes a {
+		display:inline-block;
+		min-width: 150px;
+		width:45%;
+	}
+}
+@media (max-width: 480px) {
+	.puntos div {
+		width: 100%;
+		margin-bottom: 30px;
+		min-height: 250px;
+	}
+	.espacio {
+		margin-top: 15px;
+	}
+	section p, section p a {font-size:18px; }
+	.container h1 {margin-bottom:25px; }
+	.redes a {
+		background-size:cover;
+		min-width: 90px; 
+		min-height: 30px;
+		}
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+  		<div class="container">
+    		<div class="navbar-header">
+     		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+  				<span type="button" class="tcon tcon-menu--xcross" aria-label="toggle menu"><span class="tcon-menu__lines" aria-hidden="true"></span> <span class="tcon-visuallyhidden">toggle menu</span></span>
+			</button>
+      			<a class="navbar-brand" href="index.html"><div class="cisma_icon"></div></a>
+    		</div>
+    	<div class="collapse navbar-collapse">
+    	  <ul class="nav navbar-nav">
+        	<li><a href="distribucion.html">Distribución</a></li>
+     	  </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="twitter" href="https://twitter.com/cismaeditorial"></a></li>
+            <li><a class="facebook" href="https://es-es.facebook.com/cismaeditorial"></a></li>
+            <li><a class="youtube" href="https://www.youtube.com/channel/UCoNLRhIkjTjLBeianrQiSog"></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    
+    <div class="contenedor">
+    	<article class="container">
+        	<h1>Puntos de venta</h1>
+            <div class="puntos">
+            	<div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.traficantes.net" target="_blank">
+                	<img class="espacio" src="images/traficantes.png" />
+                    <h3>Traficantes de Sueños</h3>
+                    <p>C/ Duque de Alba, 13. 28012, Madrid<br/>Tlf. 915320928<br/>www.traficantes.net</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://viruseditorial.net" target="_blank">
+                    <img class="espacio" src="images/logo-virus.jpg" />
+                    <h3>Virus editorial</h3>
+                    <p>C/ Aurora, 23, 08001, Barcelona<br/>Tlf. 934413814<br/>www.viruseditorial.net</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.localcambalache.org/" target="_blank">
+                    <img src="images/cambalache.gif" />
+                    <h3>Local Cambalache</h3>
+                    <p>C/ Martínez Vigil, 30, 33010, Oviedo<br/>Tlf. 985202292<br/>www.localcambalache.org</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.katakrak.net/" target="_blank">
+                    <img src="images/katakrak.png" />
+                    <h3>Katakrak</h3>
+                    <p>C/ Mayor, 54, 31001, Pamplona-Iruñea<br/>Tlf. 948225520<br/>www.katakrak.net</p>
+                    </a>
+                </div>
+            	<div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://larevistademuga.blogspot.com.es" target="_blank">
+                    <img src="images/muga.png" />
+                    <h3>Librería Muga</h3>
+                    <p>Avda. Pablo Neruda, 89. 28038, Madrid<br/>Tlf. 915079085<br/>http://larevistademuga.blogspot.com.es</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://lavoragine.net/" target="_blank">
+                    <img src="images/lavoragine.png"/>
+                    <h3>La Vorágine</h3>
+                    <p>C/ Cardenal Cisneros, 15 Bajo, 39001, Santander<br/>Tlf. 942375226<br/>http://lavoragine.net/</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.nodo50.org/lafuga/" target="_blank">
+                    <img src="images/lafuga.jpg" />
+                    <h3>La Fuga librerías</h3>
+                    <p>C/ Conde de Torrejón, 4, Acc., 41003, Sevilla<br/>Tlf. 954382340<br/>www.nodo50.org/lafuga</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.lapanterarossa.net/" target="_blank">
+                    <img class="espacio" src="images/pantera_rossa.png" />
+                    <h3>La Pantera Rossa</h3>
+                    <p>C/ San Vicente de Paúl, 28, 50001, Zaragoza<br/>Tlf. 976203608<br/>www.lapanterarossa.net</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.librerialaesquinadelzorro.com/" target="_blank">
+                    <img src="images/logo_laesquinadelzorro.png" />
+                    <h3>La esquina del zorro</h3>
+                    <p>C/ Arroyo del Olivar, 34. 28053, Madrid<br/>Tlf. 915079085<br/>www.librerialaesquinadelzorro.com</p>
+                    </a>
+                </div>
+                 <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://lalibredebarrio.com/" target="_blank">
+                    <img src="images/lalibre.jpg" />
+                    <h3>La Libre de barrio</h3>
+                    <p>C/ Villaverde, 4. 28912, Leganés, Madrid<br/>Tlf. 912272952<br/>http://lalibredebarrio.com</p>
+                    </a>
+                </div>
+                 <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.lamalatesta.net/" target="_blank">
+                    <img class="espacio" src="images/lamalatesta.png" />
+                    <h3>La Malatesta</h3>
+                    <p>C/ Jesús y María, 24. 28012, Madrid<br/>Tlf. 915391007<br/>www.lamalatesta.net</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.latardelibros.com/" target="_blank">
+                    <img src="images/latardelibros.jpg" />
+                    <h3>La Tarde libros</h3>
+                    <p>C/ Ruiz, 15, 28004, Madrid<br/>Tlf. 915938163<br/>www.latardelibros.com</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://laciutatinvisible.coop/" target="_blank">
+                    <img src="images/ciutat.jpg" />
+                    <h3>La Ciutat Invisible</h3>
+                    <p>C/ Riego, 35 baixos, 08014, Barcelona<br/>Tlf. 932989947<br/>http://laciutatinvisible.coop</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.libreriatrama.com/" target="_blank">
+                    <img src="images/Trama.png" />
+                    <h3>Librería Trama</h3>
+                    <p>Avda. de A Coruña, 21, 27003, Lugo<br/>Tlf. 982254063<br/>www.libreriatrama.com</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://contrabandos.org/" target="_blank">
+                    <img class="espacio" src="images/Contrabandos.png" />
+                    <h3>Contrabandos Madrid</h3>
+                    <p>Calle del Amparo, 76, 28012, Madrid<br/>http://contrabandos.org</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.librerialalibre.org/" target="_blank">
+                    <img src="images/lalibresan.png" />
+                    <h3>Librería CSA La libre</h3>
+                    <p>C/ Rampa de Sotileza, 1, 39008, Santander<br/>Tlf. 942035027<br/>www.librerialalibre.org</p>
+                    </a>
+                </div>
+                 <div class="col-md-3 col-sm-4 col-xs-6">
+                	<a href="http://www.transitant.net/" target="_blank">
+                    <img class="espacio" src="images/transitant.jpg" />
+                    <h3>Transitant</h3>
+                    <p>C/ Socors, 16 baixos, 07002, Palma de Mallorca<br/>Tlf. 971573305<br/>www.transitant.net</p>
+                    </a>
+                </div>
+            </div>     
+        </article>
+    	<section class="container">
+            	<h1>Envíos por correo</h1>
+            	<p>También distribuimos directamente a través de Correos. Para envíos hasta 500 gr. el <strong>envío ordinario</strong> cuesta <strong>2 euros</strong> y mediante <strong>correo certificado</strong> (la entrega se garantiza mediante la firma del destinatario) <strong>4 euros</strong>. A partir de 500 gr. el <strong>envío ordinario</strong> tiene un coste de <strong>4 euros</strong> y mediante <strong>correo certificado 7 euros</strong>. Los pagos se efectuarán mediante transferencia bancaria.</p>
+                <p>Para realizar los pedidos, escribidnos a <a href="mailto:info@cismaeditorial.es">info@cismaeditorial.es</a></p>
+            
+        </section>
+    </div>
+    
+    <footer class="col-xs-12">
+   <div class="rrss">
+      <a href="https://twitter.com/cismaeditorial"><img src="images/twittercolor.png"/></a>
+      <a href="https://es-es.facebook.com/cismaeditorial"><img src="images/facebookcolor.png"/></a>
+      <a href="https://www.youtube.com/channel/UCoNLRhIkjTjLBeianrQiSog"><img src="images/youtubecolor.png"/></a>
+   </div>
+      <p>info@cismaeditorial.es</p>
+      <p>© 2016 Cisma Editorial · <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/es/legalcode.es">Licencia Creative Commons</a></p>
+</footer>
+
+ 	<script src="js/jquery.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/trans.js"></script>
+	<script src="js/trens.js"></script>
+	<script>transformicons.add('.tcon');</script>
+</body>
+</html>
